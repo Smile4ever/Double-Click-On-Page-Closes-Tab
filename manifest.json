@@ -1,9 +1,9 @@
 {
 	"name": "Double Click On Page Closes Tab",
 	"description": "Double click on a page to close the current tab.",
-	"homepage_url": "http://hugsmile.eu",
+	"homepage_url": "http://itsafeature.org",
 	"manifest_version": 2,
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"background": {
 		"scripts": ["background.js"]
 	},
@@ -23,5 +23,5 @@
 			"strict_min_version": "48.0"
 		}
 	},
-	"permissions": ["storage", "tabs", "notifications"]
+	"permissions": ["tabs"]
 }

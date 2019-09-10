@@ -1,3 +1,8 @@
+0.2.1
+=====
+* Remove unnecessary permissions
+* Code cleanup
+
 0.2.0
 =====
 * Don't close the current tab when the clicked element is an AUDIO or VIDEO element

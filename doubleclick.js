@@ -5,10 +5,6 @@ function init(){
 }
 init();
 
-function onError(data){
-	if(DEBUG) sendMessage("onError", data);
-}
-
 // Send messages to the background script
 function sendMessage(action, data){
 	browser.runtime.sendMessage({"action": action, "data": data});
@@ -46,7 +42,7 @@ function assignCorrectEventListenersIframe(){
 			}catch(ex){
 				// Cross-origin domain security violation (controlled by CORS)
 				// https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
-				onError(ex);
+				if(DEBUG) console.error(ex);
 			}
 		}
 	}

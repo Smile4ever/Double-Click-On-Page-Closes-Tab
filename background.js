@@ -5,9 +5,6 @@ browser.runtime.onMessage.addListener(function(message) {
 		case "closeTab":
 			closeTab();
 			break;
-		case "onError":
-			onError(message.data);
-			break;
 		default:
 			break;
 	}
@@ -15,15 +12,8 @@ browser.runtime.onMessage.addListener(function(message) {
 
 /// Tab functions
 function closeTab(){
-	browser.tabs.query({currentWindow: true, active: true}).then(onSuccess, onError);
-	
-	function onSuccess(activeTabs) {
-		var activeTab = activeTabs[0];
+	browser.tabs.query({currentWindow: true, active: true}).then((activeTabs) => {
+		let activeTab = activeTabs[0];
 		browser.tabs.remove(activeTab.id);
-	}
-}
-
-/// Helper functions
-function onError(error) {
-	console.error(`${error}`);
+	}, console.error);
 }
