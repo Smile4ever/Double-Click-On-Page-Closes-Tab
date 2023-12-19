@@ -18,6 +18,11 @@ function eventHandler(e) {
 		}
 	}
 
+	// VK.com videoplayer (fix bug #3)
+	if(e.target.querySelector('video') != null){
+		return;
+	}
+	
 	e.preventDefault();
 	e.cancelBubble = true;
 	if (e.stopPropagation) e.stopPropagation();
