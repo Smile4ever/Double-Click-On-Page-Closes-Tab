@@ -1,5 +1,4 @@
 {
-	"id": "doubleclickonpageclosestab@hugsmile.eu",
 	"name": "Double Click On Page Closes Tab",
 	"description": "Double click on a page to close the current tab.",
 	"homepage_url": "https://github.com/Smile4ever/Double-Click-On-Page-Closes-Tab",
@@ -21,5 +20,11 @@
 	"host_permissions": [
 		"*://*/*"
 	],
-	"permissions": ["storage", "tabs", "notifications"]
+	"permissions": ["storage", "tabs", "notifications"],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "doubleclickonpageclosestab@hugsmile.eu",
+			"strict_min_version": "109.0"
+		}
+	}
 }
